@@ -6,7 +6,7 @@ API_URL = 'https://api.vk.com/method/'
 
 def vk_api_request(method, token, params):
     params['access_token'] = token
-    params['v'] = '5.131'  # Версия API
+    params['v'] = '5.131'  
     response = requests.get(API_URL + method, params=params)
     return response.json()
 
